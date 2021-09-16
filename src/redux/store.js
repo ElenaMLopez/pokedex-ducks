@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import pokemonReducer from './pokemonsDucks';
+import pokemonReducer from './pokemonsDuck';
 
 
 // Combine ducks 

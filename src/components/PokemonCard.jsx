@@ -1,9 +1,10 @@
 
-function PokemonCard() {
+function PokemonCard({image, name}) {
+
   return (
-    <div>
-      <img src="" alt="pokemon image" />
-      <h2>Pokemon name</h2>    
+    <div className="pokemon-card">
+      <img src={image} alt={name} className="pokemon-image"/>
+      <h2 className="capitalize pokemon-name">{name}</h2>    
     </div>
   )
 }
