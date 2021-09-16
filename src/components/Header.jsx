@@ -8,8 +8,8 @@ function Header() {
       <div className="header-container">
         <img src="/images/pokeball.png" alt="PokeBall" className="logo"/>
         <div className="header-buttons">
-          <button onClick={() => dispatch(getPokemonsAction())}className="btn">Get Pokemons</button>
-          <button className="btn">Load more</button>
+          <button onClick={() => dispatch(getPokemonsAction(0))} className="btn">Get Pokemons</button>
+          <button onClick={() => dispatch(getPokemonsAction(12))} className="btn">Load more</button>
         </div>
       </div>
     </header>

@@ -10,7 +10,6 @@ const initialData = {
 // Types
 const GET_POKEMONS = 'GET_POKEMONS';
 const GET_POKEMONS_FAIL = 'GET_POKEMONS_FAIL';
-const GET_MORE_POKEMONS = 'GET_MORE_POKEMONS';
 
 // Reducer
 export default function pokemonReducer(state = initialData, action) {
@@ -19,9 +18,10 @@ export default function pokemonReducer(state = initialData, action) {
       return {
         ...state, 
         array: [...state.array, ...action.payload.array], 
-        pokemons: [...state.pokemons, ...action.payload.pokemons]
+        pokemons: [...state.pokemons, ...action.payload.pokemons],
+        offset: action.payload.offset,
       }
-    case GET_MORE_POKEMONS:
+
     case GET_POKEMONS_FAIL:
       return { ...state, array: [...state.array], pokemons: [...state.pokemons] };
     default: 
@@ -30,10 +30,11 @@ export default function pokemonReducer(state = initialData, action) {
 }
 
 // Actions
-export const getPokemonsAction = () => async (dispatch, getState) => {
+export const getPokemonsAction = (number) => async (dispatch, getState) => {
   let offset = getState().pokemons.offset;
+  const nextPokemons = offset + number;
   try {
-    const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=12`);
+    const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${nextPokemons}&limit=12`);
 
     async function getPokemonsInfo() {
       const pokemonsInfo = res.data.results;
@@ -60,7 +61,8 @@ export const getPokemonsAction = () => async (dispatch, getState) => {
       type: GET_POKEMONS,
       payload: {
         array: res.data.results,
-        pokemons: pokemons
+        pokemons: pokemons,
+        offset: nextPokemons
       }
     })
 
@@ -68,6 +70,3 @@ export const getPokemonsAction = () => async (dispatch, getState) => {
     console.log(error, 'Error getting pokemons')
   } 
 }
-
-
-
