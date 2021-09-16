@@ -1,3 +1,16 @@
 * {
 box-sizing: border-box;
 }
+
+.logo {
+  width: 60px;
+  margin-right: auto;
+}
+.btn {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border: .1px solid #acacac;
+  color: #4b4b4b;
+  margin: 10px;
+  outline: none;
+}
