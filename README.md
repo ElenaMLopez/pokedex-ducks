@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+# Pokedex using Ducks
+![pokedex gif](public/readme_files/Pokedex_ducks.gif)
+
+This is a simple example of how to manage Redux with Ducks, a nice way to learn about redux.
+Take a look at the file `pokemonsDucks.js`; in this file, you can see all the functionality related to Redux. I strongly recommend taking a look at any video tutorial about how Ducks is implemented. 
+
+After being comfortable with Redux using Ducks, you can start to work with Redux in the usual way. 
+There aren't test, neither error control; is just to understand how Redux works!
+
+I use plain CSS for styles, the responsive behavior is just only **one-line** of CSS :\)
+
+Hope you like it!
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

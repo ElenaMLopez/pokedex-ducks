@@ -56,7 +56,7 @@ export const getPokemonsAction = (number) => async (dispatch, getState) => {
     }
     const pokemonsInfo = await getPokemonsInfo();
     const pokemons = await getPokemonImage(pokemonsInfo);  
-  
+
     return dispatch({
       type: GET_POKEMONS,
       payload: {
