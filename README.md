@@ -1,4 +1,4 @@
-# Pokedex using Ducks
+# Pokedex using Ducks 🦆 🦆 🦆
 ![pokedex gif](public/readme_files/Pokedex_ducks.gif)
 
 This is a simple example of how to manage Redux with Ducks, a nice way to learn about redux.
