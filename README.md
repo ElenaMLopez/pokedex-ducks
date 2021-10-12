@@ -9,7 +9,7 @@ There aren't test, neither error control; is just to understand how Redux works!
 
 I use plain CSS for styles, the responsive behavior is just only **one-line** of CSS :\)
 
-Hope you like it!
+Hope you like it! 😸
 
 ## Getting Started with Create React App
 
