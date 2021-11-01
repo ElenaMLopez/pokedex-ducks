@@ -1,6 +1,8 @@
 # Pokedex using Ducks 🦆 🦆 🦆
 ![pokedex gif](public/readme_files/Pokedex_ducks.gif)
 
+## What is this?
+
 This is a simple example of how to manage Redux with Ducks, a nice way to learn about redux.
 Take a look at the file `pokemonsDucks.js`; in this file, you can see all the functionality related to Redux. I strongly recommend taking a look at any video tutorial about how Ducks is implemented. 
 
